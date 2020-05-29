@@ -4,7 +4,7 @@
 const isPowerOfTwo = n => n && (n & (n - 1)) === 0
 
 
-fetch('https://api.github.com/users/' + document.getElementById('username').innerText)
+fetch('https://api.github.com/users/' + (location.pathname.length - 1 ? location.pathname.length : document.getElementById('username').innerText))
   .then(res => res.json())
   .then(({ public_repos }) => {
     document.getElementById('count').innerText = public_repos
@@ -12,3 +12,7 @@ fetch('https://api.github.com/users/' + document.getElementById('username').inne
       document.getElementById('note').innerText += ' (Power of two!) '
     }
   })
+
+if (location.pathname.length - 1) {
+  document.getElementById('username').innerText = location.pathname.substr(1)
+}
