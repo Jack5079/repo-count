@@ -1,0 +1,33 @@
+html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(118deg, #ff0000, #0000ff);
+  background-size: 400% 400%;
+  animation: scroll 30s ease infinite
+}
+
+@keyframes scroll {
+  from, to {
+    background-position: 0% 51%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+}
+
+body {
+  border-radius: 1em;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, .274);
+  padding: 1em;
+  font-size: 2em;
+  background: black;
+  color: white;
+  text-align: center;
+}
+
+h1 {
+  font-weight: normal;
+}
